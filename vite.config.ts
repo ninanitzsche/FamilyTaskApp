@@ -11,10 +11,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.png'],
       manifest: {
-        name: 'FamilyBoard',
-        short_name: 'FamilyBoard',
+        name: 'Famileo',
+        short_name: 'Famileo',
         description: 'ADHS-gerechtes Familien-Kanban',
-        theme_color: '#FF7A5C',
+        theme_color: '#FFF7E3',
         background_color: '#FFF7E3',
         display: 'standalone',
         icons: [

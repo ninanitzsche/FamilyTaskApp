@@ -37,3 +37,9 @@
 html {
   color-scheme: light;
 }
+
+html,
+body {
+  background-color: #FFF7E3;
+  min-height: 100%;
+}
