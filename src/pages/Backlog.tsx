@@ -403,6 +403,16 @@ export function Backlog() {
     setShowAdd(false)
   }
 
+  const openAddFromSuggestion = (title: string, emoji: string, image?: string) => {
+    setNewTitle(title)
+    setNewEmoji(emoji)
+    setNewImage(image)
+    setNewAssignee(null)
+    setNewRecurring('never')
+    setNewCooldown(0)
+    setShowAdd(true)
+  }
+
   const [showHint, setShowHint] = useState(() => {
     try {
       return localStorage.getItem('familyboard:backlogHintDismissed') !== '1'
@@ -477,7 +487,7 @@ export function Backlog() {
             {suggestions.slice(0, 6).map((t) => (
               <button
                 key={t.title}
-                onClick={() => handleAddTask(t.title, t.emoji, t.image)}
+                onClick={() => openAddFromSuggestion(t.title, t.emoji, t.image)}
                 className="flex shrink-0 flex-col items-center gap-1 rounded-2xl bg-white p-2 shadow-sm transition-transform active:scale-[0.92]"
               >
                 <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-wash-plum">
